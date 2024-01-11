@@ -1,0 +1,53 @@
+    
+        /* Apply a background image to the entire page */
+        .login {
+            background-image: url('your-image.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            height: 100vh; 
+            margin: 0; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            background: linear-gradient(135deg,   #0575E6,#021B79, #0575E6);
+
+        }
+
+        /* Style for the login form */
+        .login-form {
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the form */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow to the form */
+            background: linear-gradient(135deg,  #0575E6,#021B79, #0575E6);
+        }
+
+        /* Style for the input fields */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #0575E6, #021B79);
+
+        }
+
+        /* Style for the login button */
+        .login-button {
+            width: 100%;
+            padding: 10px;
+           background: linear-gradient(135deg,#0575E6,#021B79, #0575E6);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Center the login button horizontally */
+        .login-button-container {
+            text-align: center;
+        }

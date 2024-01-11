@@ -1,0 +1,44 @@
+{% load static %}
+<nav class="navbar navbar-expand-md bg-white shadow fixed-top header-position mb-3">
+    <div class="d-flex align-items-center w-100 ">
+
+        <img src="{% static 'images/L.jpg' %}" class="rounded-circle" style="width: 40px; margin-right:10px;"
+            alt="Logo" />
+        <div class="proj_name text-primary" onclick="location.href='/'">ASSIGNMENT</div>
+
+        
+        <div class="navbar-nav flex-row ml-md-auto d-flex d-md-flex">
+            <div class="col-3 text-white">
+                <a href="{% url 'home' %}"><h5 class="card-title">Home</h6></a>
+            </div>
+
+            <div class="col-3 text-white">
+                <a href="{% url 'task1' %}"><h5 class="card-title">TASK1</h6></a>
+
+            </div>
+            <div class="col-3 text-white">
+                <a href="{% url 'task2' %}"><h5 class="card-title">TASK2</h5></a>
+            </div>
+            
+            <div class="col-3 text-white">
+                <a href="{% url 'task3' %}"><h5 class="card-title">TASK3</h6></a>
+
+            </div>
+            <div class="col-3 text-white">
+                <a href="{% url 'task4' %}"><h5 class="card-title">TASK4(Optional)</h6></a>
+
+            </div>
+            <div class="col-3 text-white">
+                <a href="{% url 'movie' %}"><h5 class="card-title">TASK5(Optional)</h6></a>
+
+            </div>
+            
+
+        </div>
+        <div class="navbar-nav flex-row ml-md-auto d-flex d-md-flex">
+
+            
+
+        </div>
+    </div>
+</nav>

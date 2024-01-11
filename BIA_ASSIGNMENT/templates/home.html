@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <style>
+        .card11 {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        
+        }
+        .col-sm-3:hover {
+            transform: scale(1.1); /* Zoom in by 10% */
+        }
+        /* Style the active class, and buttons on mouse-over */
+        .active,
+        .btn:hover {
+            background-color: #d8355e;
+            color: white;
+        }
+        .card:hover {
+    transform: translateY(-3px);
+    transition: transform 0.3s ease;
+}
+
+
+        #myDIV1 {
+            width: 100%;
+            height: 100%;
+            border: 15px solid rgb(235, 44, 140);
+            animation: mymove 2s infinite;
+        }
+    
+        @keyframes mymove {
+            50% {
+                border-color: rgb(23, 200, 212);
+            }
+        }
+        
+        
+    </style>
+        
+        
+</head>
+<body>
+{% include "header.html" %}
+    <main role="main p-2">
+        <div class="row p-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 p-3">
+                {% if showloader %}
+                    <div class="load">
+                        <div class="loader"></div>
+                    </div>
+                {% endif %}
+                <div class="class section p-3">
+                    <div class="class container">
+                        <h2 class="title text-center m-3">
+                            <span class="gradient-text" style="font-size: 1.5em; font-weight: bold;">BASIC</span>
+                        </h2>
+                    </div>
+                </div>
+                <div style="width:1000px; margin:0 auto;">
+                    <div class="card-body shadow rounded bg-light ">
+
+                    <div class="img-responsive center-block">
+                        <div class="text-block">
+                            <h4 class="text-center">Hello </h4>
+                            <h3>you can smile...😀
+                            </h3>
+                          </div>
+                         <img src="/static/images/I.jpg" style="width: 1000px; height: 400px;" class="img-fluid" alt="Responsive image">
+                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid bg-3 text-center ">
+                <div class="card-body">
+                    <h3>WELCOME</h3>
+                </div>
+                <div class="card-body shadow rounded bg-light ">
+
+                <div class="row justify-content-center">
+                    <div class="col-sm-4">
+                        <div class="card ">
+                            <div class="card-body shadow rounded border border-primary">
+                                <h5 class="card-title">TASK</h5>
+
+                                <a href="{% url 'task1' %} ">
+                                    <img src="/static/images/1.png" class="img-responsive" style="width:25%" alt="Image">
+                                </a>
+                                <div class=" card-body">
+                                    <a href="{% url 'task1' %}" class="btn btn-outline-primary">HELLO</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card ">
+                            <div class="card-body shadow rounded border border-primary">
+                                <h5 class="card-title">TASK</h5>
+                                <a href="{% url 'task2' %}">
+                                    <img src="/static/images/2.png" class="img-responsive" style="width:25%" alt="Image">
+                                </a>
+                                <div class=" card-body">
+                                    <a href="{% url 'task2' %}" class="btn btn-outline-primary">API</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card ">
+                            <div class="card-body shadow rounded border border-primary">
+                                <h5 class="card-title">TASK</h5>
+                                <a href="{% url 'task3' %}">
+                                    <img src="/static/images/3.png" class="img-responsive" style="width:25%" alt="Image">
+                                </a>
+                                <div class=" card-body">
+                                    <a href="{% url 'task3' %}" class="btn btn-outline-primary">Database Interaction</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center p-3">
+                    <div class="col-sm-4">
+                        <div class="card ">
+                            <div class="card-body shadow rounded border border-primary">
+                                <h5 class="card-title">TASK(Optional)</h5>
+                                <a href="{% url 'task4' %}">
+                                    <img src="/static/images/4.png" class="img-responsive" style="width:25%" alt="Image">
+                                    <div class=" card-body">
+                                        <a href="{% url 'task4' %}" class="btn btn-outline-primary">JWT</a>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card ">
+                            <div class="card-body shadow rounded border border-primary">
+                                <h5 class="card-title">TASK(Optional)</h5>
+                                <a href="{% url 'movie' %}">
+                                    <img src="/static/images/5.png" class="img-responsive" style="width:25%" alt="Image">
+                                    <div class=" card-body">
+                                        <a href="{% url 'movie' %}" class="btn btn-outline-primary">MOVIE</a>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                </div>
+                <div class="about-section justify-content-center p-3">
+                    <h1>About Me</h1>
+                    <h4>This is just sample to look home page filled with content.</h4>
+                    <p>Aspiring Software Engineer | Django Fullstack | Python, Data Science, DevOps</p>
+                    <p>As an analytically-minded IT Engineer who has transitioned into a full-stack Django developer with a solid foundation in web development using Django, I am wholeheartedly committed to advancing my expertise in Python-based data science, machine learning, and artificial intelligence (AI). With a deep passion and a versatile skill set, I am determined to create innovative solutions and thrive in the dynamic fields of ML and AI development.</p>
+                </div>
+
+            </div>
+        </div> 
+    </main>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/fontawesome.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+    <footer class="container-fluid text-center">
+        <p class="bg-primary p-4">© 2023 Shivam Nirmal. All rights reserved.</p>
+    </footer>
+</body>

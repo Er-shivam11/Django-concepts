@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+
+<body>
+    <div class="container h-100">
+        <div class="login d-flex align-items-center justify-content-center flex-column text-center h-100 mx-auto">
+            <img src="{% static 'images/snowbell.png' %}" alt="">
+            <div class="login_form shadow rounded p-3 d-block mt-4">
+                <h5 class="mb-3">Login</h5>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <p>
+                        <input type="text" class="form-control mb-4" name="username" id="" placeholder="Username" autofocus>
+                        <input type="password" class="form-control mb-1 bi bi-eye " name="password" id="pass_log_id" placeholder="Password">
+                        <input type="checkbox" onclick="Toggle()" >
+                        <i class="far fa-eye"> see password</i>
+                    </p>
+                    
+                    <!-- <strong ><i class="fa fa-eye"></strong> -->
+                    {% for msg in messages %}
+                    <span class="text-danger d-block mb-2 text-left">{{ msg }}</span>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Change the type of input to password or text
+        function Toggle() {
+            let temp = document.getElementById("pass_log_id");
+
+            if (temp.type === "password") {
+                temp.type = "text";
+            }
+            else {
+                temp.type = "password";
+            }
+        }
+    </script>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+
+</body>
+
+</html>
