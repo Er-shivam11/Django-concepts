@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+    <div class="main">
+
+        {% for data in dataset %}.
+    
+        {{ data.name }}<br/>
+        {{ data.city }}<br/>
+        <hr/>
+    
+        {% endfor %}
+    
+    </div>
+    {% endblock content %}

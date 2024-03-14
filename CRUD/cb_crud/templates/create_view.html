@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="row">
+        <div class="col-3 text-center">
+            <h4 class="bg-dark mt-2">ADD DETAILS</h4>
+            <div class="card mx-auto" style="width: 25rem;">
+                <div class="card-body text-center">
+                    <form method="POST" enctype="multipart/form-data">
+                    
+                        <!-- Security token -->
+                        {% csrf_token %}
+                    
+                        <!-- Using the formset -->
+                        {{ form | crispy}}
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-9 text-center">
+            <h4 class="bg-dark mt-2">SHOW DETAILS</h4>
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Sr.no</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">CITY</th>
+                    <th scope="col">ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for data in dataset %}
+
+                  <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{ data.name }}</td>
+                    <td>{{ data.city }}</td>
+                    <td>
+                        <a href="{% url 'update_view' data.id %}" class="btn btn-primary btn-md ">Edit</a>
+                   
+                        <form method="post" action="{% url 'delete_view' data.id %}">
+                            {% csrf_token %}
+                            <input type="submit" class="btn btn-danger btn-md " value="Delete">
+                        </form>
+                    </td>
+                    
+                  </tr>
+                  {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock content %}
+    
+    

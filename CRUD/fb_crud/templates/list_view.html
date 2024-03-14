@@ -1,19 +1,6 @@
-{% load static %}
-{%load crispy_forms_tags %}
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-</head>
-<body>
-    {% include "header.html" %}
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
 
     <div class="main">
 
@@ -26,9 +13,4 @@
         {% endfor %}
     
     </div>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.js' %}"></script>
-    <script src="{% static 'js/fontawesome.js' %}"></script>
-    <script src="{% static 'js/custom.js' %}"></script>
-</body>
-</html>
+    {% endblock content %}
