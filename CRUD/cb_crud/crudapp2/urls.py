@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path,include
 
 # importing views from views..py
 from crudapp2 import views

@@ -16,9 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from crudapp2 import views
 urlpatterns = [
-    path('', include('crudapp2.urls')),
-
+    # path('', include('crudapp2.urls')),
+    path('', views.AddandShowView.as_view(),name='home' ),
     path("admin/", admin.site.urls),
+	path('list/', views.list_view ,name='list'),
+    path('update/<int:id>/', views.UpdateView.as_view(), name='update_view'),
+    path('delete/<int:id>/', views.DeleteView.as_view(), name='delete_view'),
+    path('api/', include('cb_crud.api.urls')),
+
 ]
+
+
